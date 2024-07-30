@@ -21,9 +21,9 @@ router.get('/new-post', async function(req, res) {
 });
 
 router.post('/post', async function(req, res, next){
-  let postId;
+  let authorId;
   try {
-    postId = new ObjectId(req.params.id);
+    authorId = new ObjectId(req.body.author);
   } catch (error){
     next(error);
   }
